@@ -1,0 +1,21 @@
+# Lo primero que vamos hacer en este archivo es definir una etiqueta llamada servicios y ahi le vamos
+# a poner un nombre al servicio puede ser cualquiera en este caso my-app
+
+
+#services:
+#  my-app: -> nombre del servicio
+#    build: -> le decimos que construya este servicio desde el siguiente contexto
+#      context: . -> le decimos que el contexto de este build es la carpeta donde estamos ubicados en este momento
+#      dockerfile: Dockerfile -> cual es el dockerfile que va a leer 
+#    volumes: 
+#       - .:/my-app -> que este proyecto (.) este enlazado directamente con la carpeta /app que es la carpeta
+#                       que creamos en el archivo Dockerfile
+
+services:
+  my-app: 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+  
